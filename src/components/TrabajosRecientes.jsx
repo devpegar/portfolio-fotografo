@@ -37,27 +37,17 @@ const TrabajosRecientes = () => {
   const cardSlider = (items) => {
     return items.map((item, index) => (
       <SwiperSlide key={index}>
-        <div className="flex justify-center">
-          <div className="rounded-lg shadow-lg bg-white max-w-[275px] min-h-min md:max-h-96 relative overflow-hidden group">
-            <img
-              src={item.img}
-              alt=""
-              className="rounded-t-lg transition-all duration-500 group-hover:scale-125"
-            />
-            <div className="w-full h-0 group-hover:h-full bg-gradient-to-b from-transparent to-gray-700 rounded-xl absolute left-0 bottom-0 overflow-hidden flex justify-center flex-col px-10 text-center text-sm duration-500">
-              <h3 className="font-semibold mb-1 mt-[80%] text-xl lg:text-2xl text-white">
-                {item.titulo}
-              </h3>
-              <p className="text-white text-sm">{item.descripcion}</p>
-            </div>
-          </div>
-        </div>
+        <Card
+          titulo={item.titulo}
+          descripcion={item.descripcion}
+          img={item.img}
+        />
       </SwiperSlide>
     ));
   };
 
   return (
-    <main className="w-full py-10 bg-fuchsia-500">
+    <main id="trabajos-recientes" className="w-full py-10 bg-fuchsia-500">
       <div className="w-10/12 mx-auto flex justify-between items-center">
         <h2 className="text-white text-3xl font-semibold">
           Trabajos recientes

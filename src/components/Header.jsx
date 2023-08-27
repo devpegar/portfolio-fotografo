@@ -13,9 +13,11 @@ const Header = () => {
           Una camara es el botón de guardar para el ojo de la mente
         </h1>
         <div className="rounded-xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1 hover:scale-110 transition-all duration-500">
-          <button className="h-full w-full px-5 py-2 text-xl bg-gray-500">
-            Explora
-          </button>
+          <a href="#portfolio">
+            <button className="h-full w-full px-5 py-2 text-xl bg-gray-500">
+              Explora
+            </button>
+          </a>
         </div>
       </div>
     </section>
