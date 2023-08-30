@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const Card = ({ titulo, descripcion, img }) => {
   return (
     <div className="flex justify-center">
@@ -16,6 +18,12 @@ const Card = ({ titulo, descripcion, img }) => {
       </div>
     </div>
   );
+};
+
+Card.propTypes = {
+  titulo: PropTypes.string.isRequired,
+  descripcion: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
 };
 
 export default Card;
